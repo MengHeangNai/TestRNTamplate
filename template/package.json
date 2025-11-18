@@ -1,5 +1,5 @@
 {
-  "name": "EGDI",
+  "name": "projectname",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
     "start": "react-native start",
     "test": "jest",
     "studio": "open -a /Applications/Android\\ Studio.app android/",
-    "xcode": "open -a /Applications/Xcode.app ios/EGDI.xcworkspace"
+    "xcode": "open -a /Applications/Xcode.app ios/ProjectName.xcworkspace"
   },
   "dependencies": {
     "@nozbe/watermelondb": "^0.28.0",

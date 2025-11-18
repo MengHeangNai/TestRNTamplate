@@ -14,6 +14,27 @@ const iosPath = path.join(process.cwd(), "ios");
 const androidPath = path.join(process.cwd(), "android");
 const oldAppName = "ProjectName";
 
+// ========== Update package.json ==========
+try {
+  console.log("\n📦 Processing package.json...");
+
+  const packageJsonPath = path.join(process.cwd(), "package.json");
+  if (fs.existsSync(packageJsonPath)) {
+    let packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"));
+
+    // Update package name to lowercase for npm compatibility
+    packageJson.name = projectName.toLowerCase().replace(/[^a-z0-9-]/g, "");
+
+    fs.writeFileSync(
+      packageJsonPath,
+      JSON.stringify(packageJson, null, 2) + "\n"
+    );
+    console.log(`✓ Updated package.json name to: ${packageJson.name}`);
+  }
+} catch (error) {
+  console.error(`Error updating package.json:`, error.message);
+}
+
 // ========== iOS Renaming ==========
 try {
   console.log("\n📱 Processing iOS files...");
