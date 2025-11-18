@@ -29,7 +29,7 @@ class AppDelegate: ExpoAppDelegate {
     window = UIWindow(frame: UIScreen.main.bounds)
 
     factory.startReactNative(
-      withModuleName: "EGDI",
+      withModuleName: "ProjectName",
       in: window,
       launchOptions: launchOptions
     )

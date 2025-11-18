@@ -1,4 +1,4 @@
-package egdi.gdi.immigration.gov.kh
+package com.projectname
 
 import android.app.Application
 import android.content.res.Configuration
