@@ -18,38 +18,47 @@ Before you begin, ensure you have the following installed:
 
 - **Node.js** (v18 or higher)
 - **npm** or **yarn**
-- **React Native CLI**
 - **Xcode** (for iOS development on macOS)
 - **Android Studio** (for Android development)
 - **CocoaPods** (for iOS dependencies)
 
 ```bash
-# Install React Native CLI globally
-npm install -g react-native-cli
-
 # Install CocoaPods (macOS only)
 sudo gem install cocoapods
 ```
 
 ## Creating a New Project
 
-### Option 1: Using npx (Recommended)
+### Option 1: Using React Native Community CLI (Recommended)
 
 ```bash
-npx react-native init MyProjectName --template https://github.com/MengHeangNai/TestRNTamplate
+npx @react-native-community/cli init MyProjectName --template https://github.com/MengHeangNai/TestRNTamplate
 ```
 
-### Option 2: Using GitHub URL
+### Option 2: Using GitHub SSH URL
 
 ```bash
-npx react-native init MyProjectName --template git@github.com:MengHeangNai/TestRNTamplate.git
+npx @react-native-community/cli init MyProjectName --template git@github.com:MengHeangNai/TestRNTamplate.git
 ```
 
-### Option 3: Using Local Template
+### Option 3: Using npm Package (After Publishing)
+
+```bash
+# After publishing to npm
+npx @react-native-community/cli init MyProjectName --template react-native-new-template
+```
+
+### Option 4: Using Local Template
 
 ```bash
 # Clone the template repository
 git clone git@github.com:MengHeangNai/TestRNTamplate.git
+
+# Create a new project using the local template
+npx @react-native-community/cli init MyProjectName --template file:///absolute/path/to/TestRNTamplate
+```
+
+> **Note:** The old `npx react-native init` command is deprecated. Always use `npx @react-native-community/cli init` instead.
 
 ## What Happens During Initialization
 
